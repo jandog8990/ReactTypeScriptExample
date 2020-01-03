@@ -8,6 +8,7 @@
 
 import React from 'react';
 import { Component } from 'react';
+import { ReactNode } from 'react';
 
 import {
   SafeAreaView,
@@ -26,7 +27,10 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+declare var global: {HermesInternal: null | {}};
+
+const App: () => ReactNode = () => {
+//const App: () => { 
   return (
     <>
       <StatusBar barStyle="dark-content" />
